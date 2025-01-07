@@ -1,0 +1,1 @@
+# fakespot_analyzer
