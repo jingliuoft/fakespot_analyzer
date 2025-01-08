@@ -2,10 +2,11 @@ import time
 import requests as re
 from time import sleep
 import re
+import logging
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from Fakespot.configs import configs
+from configs import configs
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 
@@ -16,6 +17,7 @@ class AmazonReviewScraper:
 
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--password-store=basic")
+        self.logger = logging
 
         prefs = {
             "credentials_enable_service": False,
